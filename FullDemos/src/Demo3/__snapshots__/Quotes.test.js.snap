@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`quote changes when the Next button is clicked 1`] = `
+<div
+  className="Quotes"
+>
+  <div
+    className="Quote"
+  >
+    Not everything that can be counted counts, and not everything that counts can be counted.
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Next
+  </button>
+</div>
+`;
+
+exports[`quote changes when the Next button is clicked 2`] = `
+<div
+  className="Quotes"
+>
+  <div
+    className="Quote"
+  >
+    A person who never made a mistake never tried anything new.
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Next
+  </button>
+</div>
+`;

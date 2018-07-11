@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a div with some text 1`] = `
+<div
+  className="Quote"
+>
+  This is some test text.
+</div>
+`;
