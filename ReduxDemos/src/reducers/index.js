@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { quotes } from './quotes';
 
-const todoApp = combineReducers({
+const quoteApp = combineReducers({
   quotes,
 });
 
-export default todoApp;
+export default quoteApp;

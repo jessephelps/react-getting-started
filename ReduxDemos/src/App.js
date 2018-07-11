@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Quotes from './containers/Quotes';
+import Quotes from './containers/QuoteContainer';
 
 class App extends Component {
   render() {

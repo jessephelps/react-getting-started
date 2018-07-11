@@ -12,18 +12,20 @@ export function getNextQuoteIsLoading() {
   };
 }
 
-export function getNextQuoteSuccess(quote) {
+export function getNextQuoteSuccess(quoteJson) {
+  console.log(quoteJson);
   return {
     type: 'QUOTE_SUCCESS',
-    quote,
+    quote: quoteJson.quote,
+    quoteIndex: quoteJson.quoteIndex,
   };
 }
 
-export function getNextQuote() {
+export function getNextQuote(id) {
   return async (dispatch) => {
     dispatch(getNextQuoteIsLoading(true));
 
-    fetch('1.json')
+    fetch(`${id}.json`)
       .then((response) => {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -32,7 +34,7 @@ export function getNextQuote() {
         return response;
       })
       .then(response => response.json())
-      .then(quote => dispatch(getNextQuoteSuccess(quote)))
+      .then(quoteJson => dispatch(getNextQuoteSuccess(quoteJson)))
       .catch(() => dispatch(getNextQuoteHasErrored(true)));
   };
 }

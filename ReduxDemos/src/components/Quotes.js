@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import Quote from '../components/Quote';
 
 class Quotes extends Component {
-  componentDidMount = () => {
-    this.getNextQuote();
-  }
-
   render() {
     return (
       <div className="Quotes">
