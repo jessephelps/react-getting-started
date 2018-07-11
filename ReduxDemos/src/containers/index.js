@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchProjects, updateProject } from '../actions/projects';
+import { fetchProjects, updateProject } from '../actions';
 import Loading from '../components/loading';
 import ProjectTabs from '../components/project';
 import { addImage } from '../actions/images';
@@ -30,20 +30,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchProjects: () => {
-    dispatch(fetchProjects());
-  },
-  addDocument: (id, files) => {
-    dispatch(addImage(id, 'document', files));
-  },
-  addPhoto: (id, files) => {
-    dispatch(addImage(id, 'photo', files));
-  },
-  addReceipt: (id, files) => {
-    dispatch(addImage(id, 'receipt', files));
-  },
-  updateProject: (project) => {
-    dispatch(updateProject(project));
+  fetchNextQuote: () => {
+    dispatch(fetchNextQuote());
   },
 });
 

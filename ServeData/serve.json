@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/5.json", "destination": "/1.json" }
+  ]
+}

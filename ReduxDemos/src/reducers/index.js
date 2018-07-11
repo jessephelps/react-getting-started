@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { projects } from './quotes';
+import { quotes } from './quotes';
 
 const todoApp = combineReducers({
-  projects,
+  quotes,
 });
 
 export default todoApp;
