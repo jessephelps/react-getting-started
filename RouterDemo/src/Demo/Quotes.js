@@ -15,7 +15,7 @@ class Quotes extends Component {
   getQuote = async (id) => {
     const newQuoteResponse = await fetch(`${id}.json`);
     const newQuoteResponseJson = await newQuoteResponse.json();
-    this.setState({quote: newQuoteResponseJson.quote});
+    this.setState({ quote: newQuoteResponseJson.quote });
   }
 
   render() {
