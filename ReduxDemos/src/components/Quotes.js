@@ -1,7 +1,12 @@
-import React, { Component } from 'react';
-import Quote from '../components/Quote';
+import React, { PureComponent } from 'react';
 
-class Quotes extends Component {
+const Quote = (props) => (
+  <div className="Quote">
+    {props.text}
+  </div>
+);
+
+class Quotes extends PureComponent {
   render() {
     return (
       <div className="Quotes">

@@ -14,7 +14,7 @@ class Quotes extends Component {
   getNextQuote = async () => {
     let nextIndex = this.state.quoteIndex + 1;
     let newQuoteResponse = await fetch(`${nextIndex}.json`);
-    if (newQuoteResponse.status === 404) {
+    if (newQuoteResponse.redirected) {
       nextIndex = 1;
       newQuoteResponse = await fetch(`${nextIndex}.json`);
     }
